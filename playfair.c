@@ -34,17 +34,17 @@ void playfair(char ch1, char ch2, char key[MX][MX]){
     }
 }
 void removeDuplicates(char str[]){
-    int size=sizeof(str);
     int i,j,k;
-    for(i=0;i<size;i++){
-        for(j=i+1;j<size;){
-            if(str[i]==str[j]){
-                for(k=j;k<size;k++){
-                    str[k]=str[k+1];
-                }size--;
-            }else j++;
-        }
-    }}
+    for(i = 0; i < strlen(str); i++)
+  	{
+  	  for(j = i + 1; str[j] != '\0'; j++){
+  	    if(str[j] == str[i]){
+  	      for(k = j; str[k] != '\0'; k++){
+	        str[k] = str[k + 1];
+		}
+ 	    }
+	  }
+	}}
 
 void main() {
     int i, j, k = 0, l, m = 0, n;
